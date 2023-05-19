@@ -1,0 +1,34 @@
+To set up remote access to your Raspberry Pi, you have a couple of options
+
+SSH (Secure Shell) SSH provides a secure way to access and control your Raspberry Pi remotely. Here's how you can set up SSH
+
+Enable SSH on your Raspberry Pi by running the command sudo raspi-config in the terminal, selecting Interfacing Options, and enabling SSH.
+
+Find the IP address of your Raspberry Pi by running the command ifconfig or hostname -I in the terminal.
+
+On your local computer, open a terminal or command prompt and use the following command to connect to the Raspberry Pi via SSH
+
+kotlin
+Copy code
+ssh pi@raspberry_pi_ip_address
+Replace raspberry_pi_ip_address with the actual IP address of your Raspberry Pi.
+
+Enter the username (pi by default) and password for your Raspberry Pi when prompted.
+
+You should now have a remote terminal session connected to your Raspberry Pi. You can run commands and control the Raspberry Pi remotely.
+
+VNC (Virtual Network Computing) VNC allows you to access the graphical desktop interface of your Raspberry Pi remotely. Here's how to set up VNC
+
+Install a VNC server on your Raspberry Pi, such as RealVNC or TigerVNC. You can typically install it using the package manager (e.g., apt).
+
+Configure the VNC server to start automatically on boot. The specific steps may vary depending on the VNC server you choose. Refer to the documentation for the server you installed.
+
+Find the IP address of your Raspberry Pi by running the command ifconfig or hostname -I in the terminal.
+
+On your local computer, install a VNC client such as RealVNC Viewer, TigerVNC, or TightVNC.
+
+Open the VNC client and enter the IP address of your Raspberry Pi to connect to it.
+
+You should now be able to see and interact with the graphical desktop interface of your Raspberry Pi remotely.
+
+Remember to ensure that your Raspberry Pi and your local computer are on the same network for remote access to work.
